@@ -1,23 +1,24 @@
 # Enter the any positive number : 5
 # Frist way 
-#     * 
-#    * * 
-#   * * * 
-#  * * * * 
 # * * * * * 
+#  * * * * 
+#   * * * 
+#    * * 
+#     * 
 # second way 
-#     * 
-#    * * 
-#   * * * 
-#  * * * * 
 # * * * * * 
+#  * * * * 
+#   * * * 
+#    * * 
+#     * 
+# > 
 
 
 
 n=int(input("Enter the any positive number : "))
 
 print("Frist way ")
-for i in range(1,n+1):
+for i in range(n,0,-1):
     # sepace print 
     for k in range(0,n-i):
         print(' ',end='')
@@ -27,7 +28,7 @@ for i in range(1,n+1):
     print('\n',end='')
     
 print("second way ")
-for i in range(1,n+1):
+for i in range(n,0,-1):
     print(" "*(n-i)+ "* "*i)
 
 
