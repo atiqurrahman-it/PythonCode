@@ -1,3 +1,11 @@
+# * * * * *
+# *         *
+# *         *
+# *         *
+# *         *
+# *         *
+# * * * * *
+
 print("D_AlphabetShape\n")
 for row in range(7):
     for col in range(6):
