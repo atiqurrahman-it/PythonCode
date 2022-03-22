@@ -1,3 +1,13 @@
+
+#   * * * *
+# *
+# *
+# *     * * *
+# *       *
+# *       *
+#   * * *
+
+
 print("G_AlphabetShape\n")
 for row in range(0, 7):
     for col in range(0, 6):
