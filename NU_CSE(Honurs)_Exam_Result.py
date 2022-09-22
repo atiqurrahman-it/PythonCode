@@ -6,10 +6,17 @@ total_lab_sub = int(input("Total Lab_subject Numbers : "))
 subCr_num = int(input("subject_Credit_number : "))
 lab_Credit_num = float(input("lab_subject_Credit_number : "))
 # main subject
+success=0
 total_sub_Ltr_Grade = []
 for i in range(1, total_sub + 1):
     sub = input("Subject {number} Ltr. Grade = : ".format(number=i))
-    total_sub_Ltr_Grade.append(sub)
+    valid_grad="a+ a a- A+ A A- b+ b b- B+ B B- c+ c C+ C D d"
+    if sub in valid_grad:
+        total_sub_Ltr_Grade.append(sub)
+    else:
+        print("invalid  grade number input ...please try aign ")
+        success=1
+        break
 
 total_sub_marks = 0.00
 for i in total_sub_Ltr_Grade:
@@ -33,10 +40,13 @@ for i in total_sub_Ltr_Grade:
         total_sub_marks += 2.00
 
 # lab subject
-add_lab_Grade = []
-for i in range(1, total_lab_sub + 1):
-    lab = input("Lab {number} Ltr. Grade = : ".format(number=i))
-    add_lab_Grade.append(lab)
+if success==0:
+    add_lab_Grade = []
+    for i in range(1, total_lab_sub + 1):
+        lab = input("Lab {number} Ltr. Grade = : ".format(number=i))
+        add_lab_Grade.append(lab)
+else:
+    print("Agin code run ")
 
 total_lab_marks = 0.00
 for i in add_lab_Grade:
@@ -67,5 +77,5 @@ both_cre = total_sub_cre + total_lab_cre
 full_marks = (total_sub_marks * subCr_num) + (total_lab_marks * lab_Credit_num)
 result = round(full_marks / both_cre, 2)
 
-print("subject", total_sub_Ltr_Grade)
+print("subject Ltr. Grade ", total_sub_Ltr_Grade)
 print("result : GPA ", result)
